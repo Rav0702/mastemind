@@ -1,0 +1,9 @@
+<div class="choice-container">
+  <div class="choices">
+    <div class="choice" *ngFor="let color of colors; let i = index" [style.background-color]="color" (click) = "addChoice(i)"></div>
+  </div>
+  <div class="choices">
+    <app-peg *ngFor="let slot of choices; let i = index" [color]="slot"></app-peg>
+    <button class="choice-button" mat-raised-button color="primary" (click)="submitGuess()">Guess</button>
+    </div>
+</div>

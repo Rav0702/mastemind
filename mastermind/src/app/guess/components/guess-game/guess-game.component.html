@@ -1,0 +1,8 @@
+<div class="board">
+  <div class="row" *ngFor="let row of board; let i = index">
+    <p>{{i}}</p>
+    <app-peg *ngFor="let slot of row" [color]="slot"></app-peg>
+    <app-response-slot [responses]="responses[i]"></app-response-slot>
+  </div>
+</div>
+<app-guess-input (guess)="handleGuess($event)"></app-guess-input>

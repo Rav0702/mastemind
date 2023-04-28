@@ -1,0 +1,21 @@
+.choice {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 1px solid rgba(108, 117, 125, 0.3);
+  cursor: pointer;
+}
+
+.choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+app-peg {
+  display: inline-block;
+}
