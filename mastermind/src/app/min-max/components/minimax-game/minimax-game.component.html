@@ -1,0 +1,6 @@
+<app-board [board]="board" [responses]="responses"></app-board>
+<button *ngIf="showStart else response" mat-raised-button color="primary" (click)="startGame()">Start</button>
+<app-reset *ngIf="showWin" (reset)="resetGame()"></app-reset>
+<ng-template #response>
+  <app-minimax-response (submit)="handleResponse($event)"></app-minimax-response>
+</ng-template>

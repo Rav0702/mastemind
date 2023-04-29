@@ -1,0 +1,12 @@
+
+<form [formGroup]="responseForm">
+  <mat-form-field>
+    <mat-label>Correct</mat-label>
+    <input type="number" matInput formControlName="correct" ngDefaultControl>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Correct color</mat-label>
+    <input type="number" matInput formControlName="good" ngDefaultControl>
+  </mat-form-field>
+</form>
+<button mat-raised-button color="primary" [disabled]="!responseForm.valid" (click)="handleSubmit()">Submit</button>

@@ -8,4 +8,5 @@ import {RoutesConstants} from "../core/constants/routes/routes.constant";
 })
 export class HomeComponent {
   readonly guessLink = `/${RoutesConstants.GUESS}`;
+  readonly minimaxLink = `/${RoutesConstants.MINIMAX}`;
 }

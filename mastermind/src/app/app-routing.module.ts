@@ -9,6 +9,10 @@ const routes: Routes = [
     loadChildren: () => import('./guess/guess.module').then(m => m.GuessModule),
   },
   {
+    path: RoutesConstants.MINIMAX,
+    loadChildren: () => import('./min-max/minimax.module').then(m => m.MinimaxModule),
+  },
+  {
     path: '',
     component: HomeComponent
   }

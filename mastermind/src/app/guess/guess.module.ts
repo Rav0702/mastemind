@@ -1,7 +1,7 @@
 import {NgModule} from "@angular/core";
 import { GuessGameComponent } from './components/guess-game/guess-game.component';
 import {GuessRoutingModule} from "./guess-routing.module";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 import {SharedModule} from "../shared/shared.module";
 import {BoardModule} from "../board/board.module";
 
@@ -10,12 +10,13 @@ import {BoardModule} from "../board/board.module";
   declarations: [
     GuessGameComponent
   ],
-  imports: [
-    GuessRoutingModule,
-    NgForOf,
-    SharedModule,
-    BoardModule
-  ],
+    imports: [
+        GuessRoutingModule,
+        NgForOf,
+        SharedModule,
+        BoardModule,
+        NgIf
+    ],
   providers: [],
   bootstrap: []
 })

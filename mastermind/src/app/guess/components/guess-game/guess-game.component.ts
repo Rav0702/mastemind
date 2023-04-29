@@ -11,6 +11,7 @@ export class GuessGameComponent implements OnInit {
   NUM_OF_ROWS = 12;
   NUM_OF_PEGS = 4;
   tour = 0;
+  showWin = false;
   code: number[] = [];
   responses: IResponse[] = [];
 
@@ -72,7 +73,20 @@ export class GuessGameComponent implements OnInit {
         }
       }
     }
+    if(correct == this.NUM_OF_PEGS) {
+      this.showWin = true;
+    }
     return {good, correct};
+  }
+
+  handleReset() {
+    this.board = [];
+    this.responses = [];
+    this.tour = 0;
+    this.showWin = false;
+    this.code = [];
+    this.initializeBoard();
+    this.initializeCode();
   }
 
 
